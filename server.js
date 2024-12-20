@@ -5,6 +5,8 @@ const ModbusTCP = require('modbus-serial');
 const app = express();
 const port = 800;
 
+let rado = 9;
+
 // Create Modbus client
 const modbusClient = new ModbusTCP();
 modbusClient.connectTCP("192.168.1.150", { port: 502 }); // Replace with your PLC IP
