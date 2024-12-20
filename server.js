@@ -24,7 +24,7 @@ async function readRegisters() {
         const data = await modbusClient.readHoldingRegisters(0, 6);
         registers = data.data; // Store the register values in the registers array
         //console.log("Register values read from PLC:", registers); // Debug log
-        readRegister();
+        readRegister(); //Treba to tu vobec ??:D
     } catch (error) {
         console.error('Error reading Modbus registers:', error);
     }
