@@ -1,0 +1,149 @@
+/* Overall Body Style */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #2b5876, #4e4376);
+    color: #fff;
+    text-align: center;
+    padding: 50px;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+/* Main Title Styles */
+.main-title {
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 500px;
+    width: 100%;
+}
+
+/* Button Styles */
+button {
+    width: 150px;
+    height: 70px;
+    border: none;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button[data-state="0"] {
+    background: linear-gradient(45deg, #ff5f6d, #ffc3a0);
+    color: #fff;
+    box-shadow: 0px 8px 15px rgba(255, 95, 109, 0.3);
+    border: 1px solid #ff5f6d;
+}
+
+button[data-state="1"] {
+    background: linear-gradient(45deg, #28a745, #85e085);
+    color: #fff;
+    box-shadow: 0px 8px 15px rgba(40, 167, 69, 0.3);
+    border: 1px solid #28a745;
+}
+
+button[data-state="0"]:hover {
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    box-shadow: 0px 8px 20px rgba(255, 95, 109, 0.4);
+}
+
+button[data-state="1"]:hover {
+    background: linear-gradient(45deg, #34d058, #70e8a8);
+    box-shadow: 0px 8px 20px rgba(40, 167, 69, 0.4);
+}
+
+/* Smooth hover effect */
+button:hover {
+    transform: translateY(-3px);
+}
+
+/* Daily Status Title Styles */
+.status-title {
+    font-size: 2rem;
+    color: #fff;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    margin-top: 40px;
+    font-weight: 600;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    .button-container {
+        max-width: 400px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .button-container {
+        max-width: 300px;
+    }
+
+    button {
+        width: 130px;
+        height: 60px;
+        font-size: 18px;
+    }
+
+    .main-title {
+        font-size: 2.5rem;
+    }
+
+    .status-title {
+        font-size: 1.8rem;
+    }
+}
+
+/* Circle styles for feedback */
+.circle-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ddd;
+    transition: background-color 0.3s;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.circle.active {
+    background-color: #28A745; /* Green when active */
+}
+
+.circle.inactive {
+    background-color: #900C3F; /* Red when inactive */
+}
+
+@media (max-width: 768px) { 
+    .circle { width: 40px; 
+        height: 40px; } } 
+@media (max-width: 480px) { 
+    .circle { width: 30px; 
+        height: 30px; } }  

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLC Christmas Lights Control</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width-device, initial-scale=1.0">
+</head>
+<body>
+    <h1 class="main-title">PLC Christmas Lights Control by KLEIN</h1>
+
+    <!-- Button Container -->
+    <div class="button-container">
+        <button id="btn-0" data-state="0" onclick="toggleRegister(0)">Enable</button>
+        <button id="btn-1" data-state="0" onclick="toggleRegister(1)">Static</button>
+        <button id="btn-2" data-state="0" onclick="toggleRegister(2)">Right</button>
+        <button id="btn-3" data-state="0" onclick="toggleRegister(3)">Left</button>
+        <button id="btn-4" data-state="0" onclick="toggleRegister(4)">Flash</button>
+    </div>
+
+    <!-- Feedback Circles for Christmas Lights -->
+    <div class="circle-container">        
+        <div id="circle-8" class="circle"></div>
+        <div id="circle-9" class="circle"></div>
+        <div id="circle-10" class="circle"></div>
+        <div id="circle-11" class="circle"></div>
+        <div id="circle-12" class="circle"></div>
+        <div id="circle-13" class="circle"></div>
+        <div id="circle-14" class="circle"></div>
+        <div id="circle-15" class="circle"></div>
+    </div>
+
+    <!-- Daily Status Title -->
+    <h1 class="status-title">Daily Status: <span id="current-datetime"></span></h1>
+
+    <script src="script.js"></script>
+</body>
+</html>
