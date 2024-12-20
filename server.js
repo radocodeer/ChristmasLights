@@ -5,7 +5,7 @@ const ModbusTCP = require('modbus-serial');
 const app = express();
 const port = 800;
 
-let rado = 99;
+let rado = 999;
 
 // Create Modbus client
 const modbusClient = new ModbusTCP();
