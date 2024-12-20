@@ -2,7 +2,7 @@ function updateDateTime() {
     const dateTimeElement = document.getElementById('current-datetime'); 
 
     if (dateTimeElement) {
-         const now = new Date(); // Format the date and time 
+        const now = new Date(); // Format the date and time 
         const formattedDate = now.toLocaleDateString(); // E.g., "12/20/2024" 
         const formattedTime = now.toLocaleTimeString(); // E.g., "10:30:45 AM" 
         // Update the span with formatted date and time 
