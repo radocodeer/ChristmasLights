@@ -1,3 +1,36 @@
+// JavaScript to create snowflakes
+function createSnowflakes() {
+    const snowContainer = document.querySelector('.snow-container');
+    
+    setInterval(function() {
+        const snowflake = document.createElement('div');
+        snowflake.classList.add('snowflake');
+        snowflake.style.left = `${Math.random() * 100}vw`;
+        snowflake.style.animationDuration = `${Math.random() * 5 + 5}s`; // Random duration between 5s and 10s
+        snowflake.style.animationDelay = `${Math.random() * 10}s`; // Random delay
+
+        snowContainer.appendChild(snowflake);
+
+        // Remove snowflake once it's out of view
+        setTimeout(() => {
+            snowflake.remove();
+        }, 15000); // Snowflake lasts for 15 seconds
+    }, 100); // Create a new snowflake every 100ms
+}
+
+// Start the snow effect
+createSnowflakes();
+
+// Play background music after user interaction
+window.onload = function() {
+    document.body.addEventListener('click', function() {
+        const music = document.getElementById('background-music');
+        if (music.paused) {
+            music.play();
+        }
+    });
+};
+
 function updateDateTime() { 
     const dateTimeElement = document.getElementById('current-datetime'); 
 
