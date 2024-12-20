@@ -21,15 +21,9 @@ function createSnowflakes() {
 // Start the snow effect
 createSnowflakes();
 
-// Play background music after user interaction
-window.onload = function() {
-    document.body.addEventListener('click', function() {
-        const music = document.getElementById('background-music');
-        if (music.paused) {
-            music.play();
-        }
-    });
-};
+// JavaScript
+const bgMusic = new Audio('/music.mp3');
+bgMusic.loop = true; // Loop the music
 
 function updateDateTime() { 
     const dateTimeElement = document.getElementById('current-datetime'); 
@@ -51,7 +45,9 @@ setInterval(updateDateTime, 1000);
 
 
 // Function to toggle the register state and send a request to the server
-function toggleRegister(index) {
+function toggleRegister(index) {    
+
+    bgMusic.play(); // Start playing    
     const currentState = document.getElementById(`btn-${index}`).dataset.state;
     const newState = currentState === '1' ? 0 : 1; // Toggle the state
 
@@ -125,7 +121,7 @@ function fetchAndUpdateRegister() {
 }
 
 
-if (false) {
+if (true) {
     // Refresh button states every 1 second
     setInterval(updateButtonStates, 1000);
     // Call the function to start fetching and updating periodically (every 1 second)
