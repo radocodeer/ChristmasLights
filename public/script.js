@@ -92,8 +92,9 @@ function fetchAndUpdateRegister() {
 }
 
 
-
-// Refresh button states every 1 second
-setInterval(updateButtonStates, 1000);
-// Call the function to start fetching and updating periodically (every 1 second)
-setInterval(fetchAndUpdateRegister, 1000);
+if (false) {
+    // Refresh button states every 1 second
+    setInterval(updateButtonStates, 1000);
+    // Call the function to start fetching and updating periodically (every 1 second)
+    setInterval(fetchAndUpdateRegister, 1000);
+}
