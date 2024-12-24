@@ -22,7 +22,7 @@ function createSnowflakes() {
 createSnowflakes();
 
 // JavaScript
-const bgMusic = new Audio('/vinetu.mp3');
+const bgMusic = new Audio('/music.mp3');
 bgMusic.loop = true; // Loop the music
 
 function updateDateTime() { 
